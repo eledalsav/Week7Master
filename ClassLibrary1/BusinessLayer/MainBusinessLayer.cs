@@ -174,11 +174,6 @@ namespace Week7Master.Core.BusinessLayer
             return "Docente eliminato correttamente";
         }
 
-        List<Corso> IBusinessLayer.GetAllDocenti()
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
     }
 }

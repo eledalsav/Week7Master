@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master", "Week7Master\Week7Master.csproj", "{11DBC594-DD57-406B-8417-4D29E87AB9F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Master", "Week7Master\Week7Master.csproj", "{11DBC594-DD57-406B-8417-4D29E87AB9F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master.Core", "ClassLibrary1\Week7Master.Core.csproj", "{3726EED6-E307-419B-AF4A-826ED7DD8E68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Master.Core", "ClassLibrary1\Week7Master.Core.csproj", "{3726EED6-E307-419B-AF4A-826ED7DD8E68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master.RepositoryMock", "Week7Master.RepositoryMock1\Week7Master.RepositoryMock.csproj", "{992984FE-C02D-431E-B5AE-CFA89348C8CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepoMock", "RepoMock\RepoMock.csproj", "{74647EC3-E959-4344-B9D0-6FA93061B908}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Master.RepositoryEF", "Week7Master.RepositoryEF\Week7Master.RepositoryEF.csproj", "{11E1C2CC-2DE0-4ADF-8B9D-58316AFCA83C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Master.MVC", "Week7Master.MVC\Week7Master.MVC.csproj", "{3AFDBB4B-DF86-4E13-A50B-FFDB84F4807E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +27,18 @@ Global
 		{3726EED6-E307-419B-AF4A-826ED7DD8E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3726EED6-E307-419B-AF4A-826ED7DD8E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3726EED6-E307-419B-AF4A-826ED7DD8E68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{992984FE-C02D-431E-B5AE-CFA89348C8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{992984FE-C02D-431E-B5AE-CFA89348C8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{992984FE-C02D-431E-B5AE-CFA89348C8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{992984FE-C02D-431E-B5AE-CFA89348C8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74647EC3-E959-4344-B9D0-6FA93061B908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74647EC3-E959-4344-B9D0-6FA93061B908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74647EC3-E959-4344-B9D0-6FA93061B908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74647EC3-E959-4344-B9D0-6FA93061B908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E1C2CC-2DE0-4ADF-8B9D-58316AFCA83C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E1C2CC-2DE0-4ADF-8B9D-58316AFCA83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E1C2CC-2DE0-4ADF-8B9D-58316AFCA83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E1C2CC-2DE0-4ADF-8B9D-58316AFCA83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFDBB4B-DF86-4E13-A50B-FFDB84F4807E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFDBB4B-DF86-4E13-A50B-FFDB84F4807E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFDBB4B-DF86-4E13-A50B-FFDB84F4807E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFDBB4B-DF86-4E13-A50B-FFDB84F4807E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

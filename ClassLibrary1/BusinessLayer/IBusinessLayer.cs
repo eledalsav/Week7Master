@@ -52,7 +52,7 @@ namespace Week7Master.Core.BusinessLayer
 
         #region Funzionalità Docenti
         //Visualizza docenti
-        public List<Corso> GetAllDocenti();
+        public List<Docente> GetAllDocenti();
 
         //Inserire un nuovo corso
         public string InserisciNuovoDocente(Docente newDocente);

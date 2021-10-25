@@ -22,5 +22,7 @@ namespace Week7Master.Core.Entities
         {
             return $"{CorsoCodice}\t{Nome}\t{Descrizione}";
         }
+
+
     }
 }
