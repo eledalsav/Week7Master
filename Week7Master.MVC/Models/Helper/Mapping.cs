@@ -60,5 +60,35 @@ namespace Week7Master.MVC.Models.Helper
             };
         }
 
+        public static StudentiViewModel ToStudentiViewModel(this Studente studente)
+        {
+
+            return new StudentiViewModel
+            {
+                Nome = studente.Nome,
+                Cognome = studente.Cognome,
+                ID = studente.ID,
+                Email = studente.Email,
+                DataNascita = studente.DataNascita,
+                TitoloStudio = studente.TitoloStudio
+
+            };
+        }
+
+        public static Studente ToStudente(this StudentiViewModel studentiViewModel)
+        {
+
+            return new Studente
+            {
+                Nome = studentiViewModel.Nome,
+                Cognome = studentiViewModel.Cognome,
+                ID = studentiViewModel.ID,
+                Email = studentiViewModel.Email,
+               DataNascita=studentiViewModel.DataNascita,
+               TitoloStudio=studentiViewModel.TitoloStudio
+
+            };
+        }
+
     }
 }

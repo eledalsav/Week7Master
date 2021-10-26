@@ -1,0 +1,9 @@
+﻿@model DocentiViewModel
+<form method="post">
+    <p>Sei sicuro di voler eliminare il docente @Model.ID - @Model.Nome @Model.Cognome ?</p>
+
+    <partial name="_Form" model="Model" />
+
+    <input type="submit" value="Conferma eliminazione" class="tbn btn-danger" />
+    <a class="btn btn-primary" asp-controller="Docente" asp-action="Index" role="button">Annulla</a>
+</form>

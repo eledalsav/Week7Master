@@ -1,39 +1,38 @@
 ﻿@model List<CorsoViewModel>
 
-    <h1>Ecco la Lista dei Corsi</h1>
+<h1>Ecco la Lista dei Corsi</h1>
 
-
-    <table class="table table-hover table-bordered table table-striped">
-        <thead>
-            <tr>
-                <th>Codice</th>
-                <th>Nome</th>
-                @*
-                <th>Descrizione</th>*@
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+<a class="btn btn-primary" asp-controller="Corsi" asp-action="Create" type="button">Inserisci Nuovo Corso</a>
+<table class="table table-hover table-bordered table table-striped">
+    <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Nome</th>
+            @*<th>Descrizione</th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
                 <td>@item.CorsoCodice</td>
                 <td>@item.Nome</td>
-                @*
-                <td>@item.Descrizione</td>*@
-                <th>
-                    <a asp-controller="Corsi" asp-action="Details" asp-route-id="@item.CorsoCodice" class="btn btn-primary">Visualizza Dettagli</a>
-                </th>
+                @*<td>@item.Descrizione</td>*@
+            <th>
+                <a asp-controller="Corsi" asp-action="Edit" asp-route-id="@item.CorsoCodice" class="btn btn-primary">Modifica</a>
+                <a asp-controller="Corsi" asp-action="Details" asp-route-id="@item.CorsoCodice" class="btn btn-primary">Visualizza Dettagli</a>
+                <a asp-controller="Corsi" asp-action="Delete" asp-route-id="@item.CorsoCodice" class="btn btn-danger">Elimina</a>
+            </th>
             </tr>
-            }
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Totale</th>
-                <th>@Model.Count</th>
-                @*
-                <th></th>*@
-                <th></th>
-            </tr>
-        </tfoot>
-    </table>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Totale</th>
+            <th>@Model.Count</th>
+            @*<th></th>*@
+            <th></th>
+        </tr>
+    </tfoot>
+</table>

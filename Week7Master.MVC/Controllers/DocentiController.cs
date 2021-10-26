@@ -50,6 +50,66 @@ namespace Week7Master.MVC.Controllers
             return View(docentiViewModel);
 
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(DocentiViewModel docentiViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var docente = docentiViewModel.ToDocenti();
+                BL.InserisciNuovoDocente(docente);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(docentiViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var docente = BL.GetAllDocenti().FirstOrDefault(d => d.ID == id);
+            var docentiViewModel = docente.ToDocentiViewModel();
+            return View(docentiViewModel);
+        }
+
+        //[HttpPost]
+        //public IActionResult Edit(DocentiViewModel docentiViewModel)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var docente = docentiViewModel.ToDocenti();
+        //        BL.ModificaDocente(docente.Nome, docente.Cognome, docente.Email, docente.Telefono, nuovaEmail);
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(docentiViewModel);
+        //}
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var docente= BL.GetAllDocenti().FirstOrDefault(d =>d.ID == id);
+            var docenteViewModel = docente.ToDocentiViewModel();
+            return View(docenteViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(DocentiViewModel docentiViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var docente = docentiViewModel.ToDocenti();
+                BL.EliminaDocente(docente.ID);
+                return RedirectToAction(nameof(Index));
+
+            }
+            return View(docentiViewModel);
+        }
     }
 
 }

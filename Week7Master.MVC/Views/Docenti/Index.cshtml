@@ -24,7 +24,9 @@
                 <td>@item.Email</td>
                 <td>@item.Telefono</td>
                 <th>
+                    <a asp-controller="Docenti" asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Modifica</a>
                     <a asp-controller="Docenti" asp-action="Details" asp-route-id="@item.ID" class="btn btn-primary">Visualizza Dettagli</a>
+                    <a asp-controller="Docenti" asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Elimina</a>
                 </th>
             </tr>
         }
